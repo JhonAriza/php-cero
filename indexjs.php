@@ -8,6 +8,7 @@
     <title>curso php y mysql</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
 <script>
   function eliminar(){
     var respuesta=confirm("estas seguro de eliminar");
@@ -74,30 +75,17 @@ if (isset($_GET['enviar'])) {
 
 
 ?>
- 
-      <form method="get" class="form-inline md-form form-sm mt-0">
-                <div  class="input-group md-form form-sm form-2 pl-0 w-100">
-                    <div v-show="query" class="input-group-append">
-                        <span class="btn btn-danger">
-                            <i class="fas fa-times"></i>
-                        </span>
-                    </div>
-                    <input class="form-control my-0 py-1 green-border" 
-                        type="text" 
-                        placeholder="Buscarrrr"  name="busqueda" 
-                        aria-label="Buscar"  v-model="query">
-                    <div class="input-group-append">
-                        <button class="input-group-text green" type="text"  name="enviar">
-                            <i class="fas fa-search text-grey"
-                            aria-hidden="true">
-                            </i>
-                        </button>
-                    </div>
-                </div>
-            </form> 
+       <div class="container-fluid">
+  <form class="d-flex">
+      <input class="form-control me-2 light-table-filter" data-table="table_id" type="text" 
+      placeholder="Buscar con JS">
+      <hr>
+      </form>
+  </div>
+
             <br>
             <br>
-<table class="table border">
+  <table class="table table-striped table-dark table_id">
   <thead class="">
     <tr>
       <th scope="col">#</th>
@@ -150,12 +138,14 @@ if (isset($_GET['enviar'])) {
  
   </tbody>
 </table>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
+ 
+<script src="acciones.js"></script>
+<script src="buscador.js"></script>
 </div>
 </div>
- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-     
+ 
  </body>
 </html>
  
